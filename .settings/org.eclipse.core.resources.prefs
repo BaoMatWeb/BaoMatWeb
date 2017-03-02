@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//WebContent/UploadFile.jsp=UTF-8
+encoding//WebContent/login.jsp=UTF-8
+encoding//WebContent/quanlyPage_DanhGia.jsp=UTF-8
+encoding//WebContent/sinhvienPage.jsp=UTF-8
+encoding//WebContent/sinhvien_DangKyDTDX.jsp=UTF-8
+encoding//WebContent/sinhvien_KetQuaNT.jsp=UTF-8
+encoding//src/Controller/DeTai_Controller.java=UTF-8
+encoding//src/Model/DeTai.java=UTF-8
+encoding//src/Model/HoiDong.java=UTF-8
+encoding//src/Servlet/CTNghiemThuQL_Servlet.java=UTF-8
+encoding//src/Servlet/CTNghiemThu_Servlet.java=UTF-8
+encoding//src/Servlet/DeTai_Servlet_CNTT.java=UTF-8
+encoding//src/Servlet/DeTai_Servlet_PheDuyet.java=UTF-8
+encoding//src/Servlet/HoiDong_Servlet.java=UTF-8
