@@ -678,5 +678,5 @@ $(document).ready(function() {
 	    else {$('.no-result').hide();}
 			  });
 	});
-
+	
 // kết thúc search

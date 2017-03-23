@@ -66,7 +66,7 @@
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
                                     <li><a  href="#"> <span  id="username" value=""  type="text" style="color:blue"> <%=session.getAttribute("Email") %></span></a></li>
-                                    <li><a href="mainPage.jsp">Đăng xuất</a></li>
+                                     <li id="logout"><a id="logout1" href="Logout.jsp">Đăng xuất</a></li>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->

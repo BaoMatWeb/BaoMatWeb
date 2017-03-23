@@ -1,5 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+       <%  
+	TaiKhoan_Controller crltkkiemtra=new TaiKhoan_Controller();
+	
+	TaiKhoan tkktra=new TaiKhoan();
+	tkktra=crltkkiemtra.getTaiKhoanByMaTK(session.getAttribute("Email").toString());
+	if(!tkktra.getQuyen().equals("Lecturers"))
+	{
+		String redirectURL="mainPage.jsp";
+		response.sendRedirect(redirectURL);
+	}
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +54,7 @@
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
 									<li><a href="#"><span  style="color:blue">Giảng Viên A</span></a></li>
-									<li><a href="mainPage.jsp">Đăng xuất</a></li>
+									 <li id="logout"><a id="logout1" href="Logout.jsp">Đăng xuất</a></li>
 								</ul>
 							</div>
 							<!-- /.navbar-collapse -->

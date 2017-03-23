@@ -5,7 +5,17 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-
+<%  
+	TaiKhoan_Controller crltkkiemtra=new TaiKhoan_Controller();
+	
+	TaiKhoan tkktra=new TaiKhoan();
+	tkktra=crltkkiemtra.getTaiKhoanByMaTK(session.getAttribute("Email").toString());
+	if(!tkktra.getQuyen().equals("Manager"))
+	{
+		String redirectURL="mainPage.jsp";
+		response.sendRedirect(redirectURL);
+	}
+%>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -79,7 +89,7 @@ TB_TK_Controller cttb= new TB_TK_Controller();
                                 </ul>
                                <ul class="nav navbar-nav navbar-right">
                                     <li><a  href="#"> <span  id="username" value=""  type="text" style="color:blue"> <%=session.getAttribute("Email") %></span></a></li>
-                                    <li><a href="mainPage.jsp">Đăng xuất</a></li>
+                                     <li id="logout"><a id="logout1" href="Logout.jsp">Đăng xuất</a></li>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
