@@ -5,7 +5,17 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-
+<%  
+	TaiKhoan_Controller crltkkiemtra=new TaiKhoan_Controller();
+	
+	TaiKhoan tkktra=new TaiKhoan();
+	tkktra=crltkkiemtra.getTaiKhoanByMaTK(session.getAttribute("Email").toString());
+	if(!tkktra.getQuyen().equals("Manager"))
+	{
+		String redirectURL="mainPage.jsp";
+		response.sendRedirect(redirectURL);
+	}
+%>
 <!DOCTYPE html>
 <html lang="vi">
 

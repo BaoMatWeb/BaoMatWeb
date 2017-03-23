@@ -5,6 +5,17 @@
 <%@ page import="Controller.*,Model.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+       <%  
+	TaiKhoan_Controller crltkkiemtra=new TaiKhoan_Controller();
+	
+	TaiKhoan tkktra=new TaiKhoan();
+	tkktra=crltkkiemtra.getTaiKhoanByMaTK(session.getAttribute("Email").toString());
+	if(!tkktra.getQuyen().equals("Lecturers"))
+	{
+		String redirectURL="mainPage.jsp";
+		response.sendRedirect(redirectURL);
+	}
+%>
 <!DOCTYPE html>
 <html lang="en">
 

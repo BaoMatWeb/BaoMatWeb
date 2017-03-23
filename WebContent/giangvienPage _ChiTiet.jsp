@@ -1,3 +1,5 @@
+<%@page import="Model.TaiKhoan"%>
+<%@page import="Controller.TaiKhoan_Controller"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
        <%  
