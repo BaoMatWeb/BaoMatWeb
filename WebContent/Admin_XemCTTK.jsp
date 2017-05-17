@@ -7,7 +7,9 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%
+	TaiKhoan_Controller tk = new TaiKhoan_Controller();
+%>
   <%  
 	TaiKhoan_Controller crltkkiemtra=new TaiKhoan_Controller();
 	
