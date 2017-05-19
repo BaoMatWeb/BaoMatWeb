@@ -378,7 +378,7 @@ $( document ).ready(function() {
 																
 																	<b>
 																		<p>Tên chủ nhiệm: <%=taikhoan.getHoTen() %></p>
-																		<p>MSSV: <%=taikhoan.getMatKhau() %></p>
+																		
 																		<p>Ngày sinh: <%=taikhoan.getNgaySinh() %></p>
 																		<p>Thuộc khoa: <%=taikhoan.getNganh() %></p>
 																		<p>Quê quán: Quảng Ngãi</p>
@@ -571,7 +571,7 @@ $( document ).ready(function() {
 										<div class="form-inline">
 											<div class="col-xs-6">
 											<label>MSSV: </label>
-											<input class="form-control" id="" type="text" value="<%=detai.getMSSVCN() %>" readonly>
+											<input class="form-control" id="" type="text" value="NULL" readonly>
 											
 											</div>
 										</div>

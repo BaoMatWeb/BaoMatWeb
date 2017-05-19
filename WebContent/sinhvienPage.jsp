@@ -572,7 +572,7 @@ $( document ).ready(function() {
 																
 																	<b>
 																		<p>Tên chủ nhiệm: <%=taikhoan.getHoTen() %></p>
-																		<p>MSSV: <%=taikhoan.getMatKhau() %></p>
+																		
 																		<p>Ngày sinh: <%=taikhoan.getNgaySinh() %></p>
 																		<p>Thuộc khoa: <%=taikhoan.getNganh() %></p>
 																		<p>Quê quán: Quảng Ngãi</p>
