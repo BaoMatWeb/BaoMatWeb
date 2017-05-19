@@ -18,6 +18,7 @@ import Controller.Login_Controller;
 import Controller.TaiKhoan_Controller;
 import Model.DeTai;
 import Model.HoiDong;
+import Object.MD5Library;
 import javafx.print.Printer;
 
 /**
@@ -64,10 +65,12 @@ public class Login_servlet extends HttpServlet {
 		String Quyen = request.getParameter("phanquyen");
 		String MatKhau = request.getParameter("password");
 		String Email = request.getParameter("Email");
+		String bammatkhau=MD5Library.md5(MatKhau);
+		System.out.println("bam: "+bammatkhau);
 		Login_Controller logincrt = new Login_Controller();
-		if(logincrt.loginTaiKhoan1(Email, MatKhau, Quyen))
+		if(logincrt.loginTaiKhoan1(Email, bammatkhau, Quyen))
 		{
-			
+			System.out.println("Đăng nhập thất bại!");
 			HttpSession session=request.getSession();
 			session.setAttribute("Email",Email);
 			

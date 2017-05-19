@@ -4,7 +4,7 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
   <%  
@@ -165,8 +165,8 @@ String type = request.getParameter("type");
 												for(TaiKhoan a:tk.getListTaiKhoan()){
 											%>
 												<tr>
-													
-													<td><%=a.getHoTen()%></td>
+													<c:set var="title" value='<%=a.getHoTen()%>'/>
+														<td>${fn:escapeXml(title)}</td>
 													<td><%=a.getMaTK()%></td>
 													<td><%=a.getEmail()%></td>
 													<td><%=a.getQuyen()%></td>

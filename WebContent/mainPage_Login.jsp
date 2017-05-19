@@ -86,7 +86,7 @@ $(document).ready(function() {
 				<h3 class="panel-title" style="text-align:center"><b>Sign In</b></h3>
 			</div>
 			<div class="panel-body">
-				<form action="Login_servlet" method="post" id="loginform">
+				<form action="Login_servlet" method="post" id="">
 								<div class="form-inline" style="margin-left:70px">
 									<label>
 										<input type="radio" id="input_sv" name="phanquyen" value="Student" checked>
@@ -106,13 +106,13 @@ $(document).ready(function() {
 									</label>
 								</div>
 
-								<div class="form-group has-feedback">
-									<input class="form-control" id="svLogin_Email" placeholder="E-mail" name="Email" type="email" >
-									<span class="glyphicon form-control-feedback" id="svLogin_Email1"></span>
+								<div class="">
+									<input class="form-control" id="svLogin_Email" placeholder="E-mail" name="Email" type="" >
+								
 								</div>
-								<div class="form-group has-feedback">
+								<div class="">
 									<input class="form-control" id="svLogin_Pass" placeholder="Password" name="password" type="Password" value="">
-									<span class="glyphicon form-control-feedback" id="svLogin_Pass1"></span>
+									
 								</div>
 								<div class="checkbox">
 									<label>

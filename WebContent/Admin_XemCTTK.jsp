@@ -4,7 +4,7 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
@@ -127,7 +127,8 @@ if (request.getParameter("MaTK") != null) {
 												for(TaiKhoan a:tk.getListTaiKhoan()){
 											%>
 													<tr>
-														<td><%=a.getHoTen()%></td>
+														<c:set var="title" value='<%=a.getHoTen()%>'/>
+														<td>${fn:escapeXml(title)}</td>
 														<td><%=a.getMaTK()%></td>
 														<td><%=a.getEmail()%></td>
 														<td><%=a.getQuyen()%></td>
@@ -169,7 +170,7 @@ if (request.getParameter("MaTK") != null) {
 												<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 													<br> <br> <b>
 														<p>Tên chủ nhiệm:<%=c.getHoTen() %> </p>
-														<p>MSSV: <%=c.getMatKhau() %></p>
+											
 														<p>Ngày sinh: <%=c.getNgaySinh() %></p>
 														<p>Thuộc khoa: <%=c.getNganh() %></p>
 														<p>Quê quán: Quảng Ngãi</p>

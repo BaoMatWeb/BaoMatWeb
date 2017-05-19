@@ -13,6 +13,7 @@ import Controller.TaiKhoan_Controller;
 import Model.DeTai;
 import Model.HoiDong;
 import Model.TaiKhoan;
+import Object.MD5Library;
 
 /**
  * Servlet implementation class ThemTaiKhoan_Servlet
@@ -60,7 +61,7 @@ public class ThemTaiKhoan_Servlet extends HttpServlet {
 				 maTk="tk"+Integer.toString(i);
 			}
 		tk.setMaTK(maTk);
-		tk.setMatKhau(request.getParameter("password1"));
+		tk.setMatKhau(request.getParameter(MD5Library.md5("password1")));
 		tk.setQuyen(request.getParameter("quyen"));
 		tk.setHoTen(request.getParameter("hoten"));
 		tk.setNgaySinh(request.getParameter("nsinh"));

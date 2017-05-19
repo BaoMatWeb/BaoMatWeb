@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import Controller.TaiKhoan_Controller;
 import Model.TaiKhoan;
+import Object.MD5Library;
+
 
 /**
  * Servlet implementation class TaiKhoan_Servlet
@@ -45,8 +47,9 @@ public class TaiKhoan_Servlet extends HttpServlet {
 				System.out.println("Vào update TT");
 				String quyen = request.getParameter("Quyen");
 				TaiKhoan tk=new TaiKhoan();
-				String maTK = request.getParameter("MaTK");
-				tk=crt.getTaiKhoanByMaTK(maTK);
+				String getmaTK = request.getParameter("MaTK");
+				String bamMaTK=MD5Library.md5(getmaTK);
+				tk=crt.getTaiKhoanByMaTK(bamMaTK);
 				tk.setEmail(request.getParameter("email"));
 				tk.setNganh(request.getParameter("nganh"));
 				tk.setCNNH(request.getParameter("cnnganhang"));
