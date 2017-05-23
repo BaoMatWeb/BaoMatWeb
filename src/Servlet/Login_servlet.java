@@ -68,9 +68,9 @@ public class Login_servlet extends HttpServlet {
 		String bammatkhau=MD5Library.md5(MatKhau);
 		System.out.println("bam: "+bammatkhau);
 		Login_Controller logincrt = new Login_Controller();
+		//System.out.println(""+logincrt.loginTaiKhoan1(Email, bammatkhau, Quyen));
 		if(logincrt.loginTaiKhoan1(Email, bammatkhau, Quyen))
 		{
-			System.out.println("Đăng nhập thất bại!");
 			HttpSession session=request.getSession();
 			session.setAttribute("Email",Email);
 			
@@ -95,15 +95,15 @@ public class Login_servlet extends HttpServlet {
 		else
 		{
 			System.out.println("Dang nhap that bai!");
-			type = "dntb";
-			url="mainPage_Login.jsp?type="+type;
+	
+			url="mainPage.jsp?type="+type;
 			error="dang nhap lai!";
 		}
 					
 		}
 		catch (Exception e ) {
-			
-			url="loginPage.jsp";	
+			System.out.println("Dang nhap that bai!");
+			url="mainPage.jsp";	
 		}
 		request.setAttribute("error", error);
 		response.sendRedirect(url);

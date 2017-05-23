@@ -10,8 +10,10 @@
 	
 	TaiKhoan tkktra=new TaiKhoan();
 	tkktra=crltkkiemtra.getTaiKhoanByMaTK(session.getAttribute("Email").toString());
+	
 	if(!tkktra.getQuyen().equals("Student"))
 	{
+		
 		String redirectURL="mainPage.jsp";
 		response.sendRedirect(redirectURL);
 	}

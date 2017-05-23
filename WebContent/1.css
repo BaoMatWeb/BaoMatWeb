@@ -67,9 +67,9 @@ h4 {
     height: auto;
 }
 .page{
-    padding-left: 150px;
-    padding-right: 150px;
-    background-image: url("images/background.jpg");
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #FFFFCC;
 }
 .pictureMain{
     background: white;

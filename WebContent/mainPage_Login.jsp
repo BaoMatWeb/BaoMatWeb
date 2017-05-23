@@ -32,8 +32,7 @@ $(document).ready(function() {
     	}
 })
 </script>
-</head>
-<body>
+
 	<%
 	String type = request.getParameter("type");
 	String error="";
